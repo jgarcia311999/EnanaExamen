@@ -10,29 +10,29 @@ class EnanaTest extends TestCase
     public function testCreandoEnana()
     {
         # Creación de una enana viva con 50 puntos de vida
-        $enanaViva = new Enana("Gimli", 50);
-        $this->assertEquals("Gimli", $enanaViva->getNombre());
+        $enanaViva = new Enana("Nerea", 50);
+        $this->assertEquals("Nerea", $enanaViva->getNombre());
         $this->assertEquals(50, $enanaViva->getPuntosVida());
-        $this->assertEquals("viva", $enanaViva->getSituacion());
+        $this->assertEquals("Nerea", $enanaViva->getSituacion());
 
         # Creación de una enana muerta con 0 puntos de vida
-        $enanaMuerta = new Enana("Thorin", 0);
-        $this->assertEquals("Thorin", $enanaMuerta->getNombre());
+        $enanaMuerta = new Enana("Eva", 0);
+        $this->assertEquals("Eva", $enanaMuerta->getNombre());
         $this->assertEquals(0, $enanaMuerta->getPuntosVida());
-        $this->assertEquals("limbo", $enanaMuerta->getSituacion());
+        $this->assertEquals("Eva", $enanaMuerta->getSituacion());
 
         # Creación de una enana en limbo con -20 puntos de vida
-        $enanaLimbo = new Enana("Fili", -20);
-        $this->assertEquals("Fili", $enanaLimbo->getNombre());
+        $enanaLimbo = new Enana("Moises", -20);
+        $this->assertEquals("Moises", $enanaLimbo->getNombre());
         $this->assertEquals(-20, $enanaLimbo->getPuntosVida());
-        $this->assertEquals("muerta", $enanaLimbo->getSituacion());
+        $this->assertEquals("Moises", $enanaLimbo->getSituacion());
     }
 
 
     public function testHeridaLeveVive()
     {
         # Creación de una enana con 30 puntos de vida (suficientes para sobrevivir a una herida leve)
-        $enana = new Enana("Dwalin", 30);
+        $enana = new Enana("Nando", 30);
 
         # Aplicación de una herida leve
         $enana->heridaLeve();
@@ -62,7 +62,7 @@ class EnanaTest extends TestCase
     public function testHeridaGrave()
     {
         # Creación de una enana viva con 30 puntos de vida
-        $enana = new Enana("Ori", 30);
+        $enana = new Enana("Vicent", 30);
 
         # Aplicación de una herida grave
         $enana->heridaGrave();
@@ -75,7 +75,7 @@ class EnanaTest extends TestCase
     public function testPocimaRevive()
     {
         # Creación de una enana muerta con -5 puntos de vida
-        $enana = new Enana("Bombur", -5);
+        $enana = new Enana("Emilio", -5);
 
         # Aplicación de la pócima
         $enana->pocima();
@@ -90,7 +90,7 @@ class EnanaTest extends TestCase
     public function testPocimaNoRevive()
     {
         # Creación de una enana en limbo con 0 puntos de vida
-        $enana = new Enana("Balin", 0);
+        $enana = new Enana("Roberto", 0);
 
         # Aplicación de la pócima
         $enana->pocima();
@@ -104,7 +104,7 @@ class EnanaTest extends TestCase
     public function testPocimaExtraLimbo()
     {
         # Creación de una enana en limbo con 0 puntos de vida
-        $enana = new Enana("Balin", 0);
+        $enana = new Enana("Jesus", 0);
 
         # Aplicación de la pócima extra
         $enana->pocimaExtra();
