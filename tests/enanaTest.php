@@ -104,7 +104,7 @@ class EnanaTest extends TestCase
     public function testPocimaExtraLimbo()
     {
         # Creación de una enana en limbo con 0 puntos de vida
-        $enana = new Enana("Jesus", 0);
+        $enana = new Enana("Balin", 0);
 
         # Aplicación de la pócima extra
         $enana->pocimaExtra();
